@@ -1,0 +1,89 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  background: rgb(131, 131, 131);
+}
+
+.menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.list {
+  width: 300px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.item {
+  border-top: 1 solid rgb(41, 128, 185);
+  overflow: hidden;
+}
+
+.btn {
+  display: block;
+  padding: 16px 20px;
+  background: rgb(52, 152, 219);
+  color: rgb(255, 255, 255);
+  position: relative;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 20px;
+  bottom: -7px;
+  background: rgb(52, 152, 219);
+  transform: rotate(45deg);
+}
+
+.btn i {
+  margin-right: 10px;
+}
+
+.smenu {
+  background: #333;
+  overflow: hidden;
+  transition: max-height 2s;
+  max-height: 0;
+}
+
+.smenu a {
+  display: block;
+  padding: 16px 26px;
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  margin: 4px 0px;
+  position: relative;
+  text-decoration: none;
+}
+
+.smenu a::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: rgb(52, 152, 219);
+  left: 0px;
+  top: 0px;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.menu a:hover::before {
+  opacity: 1;
+}
+
+.item:target .smenu {
+  max-height: 100px;
+}

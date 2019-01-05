@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <style type="text/css">
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: sans-serif;
+        list-style-type: none;
+        text-decoration: none;
+      }
+
+      body {
+        background: rgb(131, 131, 131);
+      }
+
+      .menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .list {
+        width: 300px;
+        border-radius: 7px;
+        overflow: hidden;
+      }
+
+      .item {
+        border-top: 1 solid rgb(41, 128, 185);
+        overflow: hidden;
+      }
+
+      .btn {
+        display: block;
+        padding: 16px 20px;
+        background: rgb(52, 152, 219);
+        color: rgb(255, 255, 255);
+        position: relative;
+      }
+
+      .btn::before {
+        content: "";
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        left: 20px;
+        bottom: -7px;
+        background: rgb(52, 152, 219);
+        transform: rotate(45deg);
+      }
+
+      .btn i {
+        margin-right: 10px;
+      }
+
+      .smenu {
+        background: #333;
+        overflow: hidden;
+        transition: 2s;
+        max-height: 0px;
+      }
+
+      .smenu a {
+        display: block;
+        padding: 16px 26px;
+        color: rgb(255, 255, 255);
+        font-size: 13px;
+        margin: 4px 0px;
+        position: relative;
+        text-decoration: none;
+      }
+
+      .smenu a::before {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 100%;
+        background: rgb(52, 152, 219);
+        left: 0px;
+        top: 0px;
+        transition: 0.3s;
+        opacity: 0;
+      }
+
+      .menu a:hover::before {
+        opacity: 1;
+      }
+
+      .item:target .smenu {
+        max-height: 10rem;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <div class="list">
+        <li class="item" id="profile">
+          <a href="#profile" class="btn"><i class="far fa-user"></i>Thông tin</a>
+          <div class="smenu">
+            <a href="#">Bài đăng</a>
+            <a href="#">Ảnh</a>
+            <a href="#">Video</a>
+          </div>
+        </li>
+
+        <li class="item" id="messages">
+          <a href="#messages" class="btn"><i class="far fa-envelope"></i>Tin nhắn</a>
+          <div class="smenu">
+            <a href="#">Mới</a>
+            <a href="#">Spam</a>
+          </div>
+        </li>
+
+        <li class="item" id="setting">
+          <a href="#setting" class="btn"><i class="fas fa-cog"></i>Cài đặt</a>
+          <div class="smenu">
+            <a href="#">Mật khẩu</a>
+            <a href="#">Ngôn ngữ</a>
+          </div>
+        </li>
+
+        <li class="item">
+          <a href="#" class="btn"><i class="fas fa-sign-out-alt"></i>Đăng xuất</a>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>
